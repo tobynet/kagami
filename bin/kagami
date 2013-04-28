@@ -1,3 +1,51 @@
 #!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
 
-require 'kagami'
+program = File.basename($PROGRAM_NAME)
+USAGE = <<-EOD
+usage: #{program} text
+
+example:
+  $ #{program} "Java and you >>>> Ruby <<<< The internet"
+  The internet >>> Ruby >>>> Java and you
+
+  $ #{program} <<END
+                        Firewall
+                           ||
+  +--------+  +-------+    || The Internet 
+  | server +--+ proxy +----||======☁=======
+  +--------+  +-------+    ||
+                           ||
+  END
+             Firewall
+                ||
+   The Internet ||    +-------+  +--------+
+  =======☁======||----+ proxy +--+ server |
+                ||    +-------+  +--------+
+                ||
+
+  $ cat hoge.txt | #{program}
+  (reversed hoge.txt every one line)
+EOD
+
+# No args on interactive shell
+if $stdin.tty? && ARGV.empty?
+  puts USAGE
+  exit 1
+end
+
+# Fetch source text
+figure = ARGV.shift || ARGF.read
+
+# Calculate max text width for align
+max_width = figure.lines.map{|x| x.chomp.size}.max
+# Align string
+aligned_figure = figure.lines.map{|x| x.chomp.ljust(max_width)}
+
+# Reverse
+reversed_figure = aligned_figure.map{|x| x.chomp.reverse }
+
+# Rereverse readable words only!!!!!
+readable_figure = reversed_figure.join("\n").gsub(/(\w+(:? \w+)*)/){|s| s.reverse}
+
+puts readable_figure
