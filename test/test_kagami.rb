@@ -4,7 +4,7 @@ $VERBOSE = true
 require 'minitest/autorun'
 begin
   require 'minitest/pride'
-ensure LoadError
+rescue LoadError
   # ignore error for old ruby
 end
 require 'kagami'
