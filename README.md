@@ -1,6 +1,5 @@
 # Kagami [![Build Status](https://travis-ci.org/toooooooby/kagami.png)](https://travis-ci.org/toooooooby/kagami)
 
-
 A tool for mirroring text and ascii art.
 
 ## Installation
@@ -19,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-```bash
+```
 $ kagami "Java and you >>>> Ruby <<<< The internet"
 The internet >>> Ruby >>>> Java and you
 
