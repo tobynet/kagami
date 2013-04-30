@@ -8,9 +8,9 @@ Gem::Specification.new do |gem|
   gem.version       = Kagami::VERSION
   gem.authors       = ["toooooooby"]
   gem.email         = ["toby.net.info.mail+git@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{A tool for mirroring text and ascii art}
+  gem.summary       = %q{A tool for mirroring text and ascii art}
+  gem.homepage      = "https://github.com/toooooooby/kagami"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

@@ -1,6 +1,6 @@
 # Kagami
 
-TODO: Write a gem description
+A tool for mirroring text and ascii art.
 
 ## Installation
 
@@ -18,7 +18,28 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```bash
+$ kagami "Java and you >>>> Ruby <<<< The internet"
+The internet >>> Ruby >>>> Java and you
+
+$ kagami <<END
+                      Firewall
+                         ||
++--------+  +-------+    || The Internet 
+| server +--+ proxy +----||======☁=======
++--------+  +-------+    ||
+                         ||
+END
+           Firewall
+              ||
+ The Internet ||    +-------+  +--------+
+=======☁======||----+ proxy +--+ server |
+              ||    +-------+  +--------+
+              ||
+
+$ cat hoge.txt | kagami
+(reversed hoge.txt every one line)
+```
 
 ## Contributing
 
