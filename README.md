@@ -1,4 +1,5 @@
-# Kagami
+# Kagami [![Build Status](https://travis-ci.org/toooooooby/kagami.png)](https://travis-ci.org/toooooooby/kagami)
+
 
 A tool for mirroring text and ascii art.
 
