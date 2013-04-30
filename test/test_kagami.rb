@@ -2,7 +2,11 @@
 # -*- coding: utf-8 -*-
 $VERBOSE = true
 require 'minitest/autorun'
-require 'minitest/pride'
+begin
+  require 'minitest/pride'
+ensure LoadError
+  # ignore error for old ruby
+end
 require 'kagami'
 
 describe "Kagami" do
