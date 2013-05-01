@@ -8,7 +8,7 @@ USAGE = <<-EOD
 usage: #{program} text
 
 example:
-  $ #{program} "Java and you >>>> Ruby <<<< The internet"
+  $ #{program} "Java and you >>>> Ruby >>> The internet"
   The internet >>> Ruby >>>> Java and you
 
   $ #{program} <<END
