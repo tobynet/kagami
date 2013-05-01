@@ -23,7 +23,7 @@ Or install it yourself as:
 ## Usage
 
 ```
-$ kagami "Java and you >>>> Ruby <<<< The internet"
+$ kagami "Java and you >>>> Ruby >>> The internet"
 The internet >>> Ruby >>>> Java and you
 
 $ kagami <<END
