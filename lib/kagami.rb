@@ -16,7 +16,7 @@ module Kagami
     end
 
     def readable(line)
-      return line.gsub(/(\w+(:? \w+)*)/){|s| s.reverse}
+      return line.gsub(/\w+(?: \w+)*/){|s| s.reverse}
     end
 
     def convert(line)
