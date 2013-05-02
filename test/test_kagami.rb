@@ -10,7 +10,7 @@ begin
 rescue LoadError
   # ignore error for old ruby
 end
-require 'kagami'
+require_relative '../lib/kagami'
 
 describe "Kagami" do
   ONE_LINE_DATA = "The internet >>> Ruby >>>> Java and you"
@@ -21,6 +21,15 @@ describe "Kagami" do
 | server +--+ proxy +----||======☁=======
 +--------+  +-------+    ||
                          ||
+  EOD
+  MOO_DATA = <<-'EOD'
+         (__) 
+         (oo) 
+   /------\/ 
+  / |    ||   
+ *  /\---/\ 
+    ~~   ~~   
+...."Have you mooed today?"...
   EOD
 
   it ".max_width" do
@@ -73,6 +82,16 @@ llaweriF
 =======☁======||----+ proxy +--+ server |
               ||    +-------+  +--------+
               ||                         
+    EOD
+    Kagami.convert("Are you crazy? Yes, I'm crazy! Whoops.").must_equal "Whoops. Yes, I'm crazy! Are you crazy?"
+    Kagami.convert(MOO_DATA).must_equal <<-'EOD'.chomp
+                 )__(         
+                 )oo(         
+                  /\------/   
+                   ||    | /  
+                   \/---\/  * 
+                   ~~   ~~    
+..."Have you mooed today?"....
     EOD
   end
 end
