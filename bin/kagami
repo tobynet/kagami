@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
 
-require File.join(File.dirname(__FILE__), "../lib/kagami")
+require_relative "../lib/kagami"
 
 program = File.basename($PROGRAM_NAME)
 USAGE = <<-EOD

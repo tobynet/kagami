@@ -1,4 +1,4 @@
-require "kagami/version"
+require_relative "kagami/version"
 
 module Kagami
   class << self

@@ -10,7 +10,7 @@ begin
 rescue LoadError
   # ignore error for old ruby
 end
-require 'kagami'
+require_relative '../lib/kagami'
 
 describe "Kagami" do
   ONE_LINE_DATA = "The internet >>> Ruby >>>> Java and you"
