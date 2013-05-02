@@ -74,5 +74,6 @@ llaweriF
               ||    +-------+  +--------+
               ||                         
     EOD
+    Kagami.convert("Are you crazy? Yes, I'm crazy! Whoops.").must_equal "Whoops. Yes, I'm crazy! Are you crazy?"
   end
 end
