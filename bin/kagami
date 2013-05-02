@@ -26,8 +26,14 @@ example:
                 ||    +-------+  +--------+
                 ||
 
-  $ cat hoge.txt | #{program}
-  (reversed hoge.txt every one line)
+  $ apt-get moo | #{program}
+                   )__(         
+                   )oo(         
+                    /\------/   
+                     ||    | /  
+                     \/---\/  * 
+                     ~~   ~~    
+  ..."Have you mooed today?"....
 EOD
 
 # When no args on interactive shell

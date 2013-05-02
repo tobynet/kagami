@@ -5,6 +5,7 @@
 Kagami is a tool for mirroring text and ascii art.
 
 ![Screencast](https://github.com/toooooooby/kagami/raw/master/_assets/screencast.gif)
+(Screencast is in v0.1.4, little old version)
 
 ## Installation
 
@@ -41,8 +42,23 @@ END
               ||    +-------+  +--------+
               ||
 
-$ cat hoge.txt | kagami
-(reversed hoge.txt every one line)
+$ apt-get moo
+         (__) 
+         (oo) 
+   /------\/ 
+  / |    ||   
+ *  /\---/\ 
+    ~~   ~~   
+...."Have you mooed today?"...
+
+$ apt-get moo | kagami
+                 )__(         
+                 )oo(         
+                  /\------/   
+                   ||    | /  
+                   \/---\/  * 
+                   ~~   ~~    
+..."Have you mooed today?"....
 ```
 
 ## Contributing
