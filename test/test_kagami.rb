@@ -22,6 +22,15 @@ describe "Kagami" do
 +--------+  +-------+    ||
                          ||
   EOD
+  MOO_DATA = <<-'EOD'
+         (__) 
+         (oo) 
+   /------\/ 
+  / |    ||   
+ *  /\---/\ 
+    ~~   ~~   
+...."Have you mooed today?"...
+  EOD
 
   it ".max_width" do
     Kagami.max_width(ONE_LINE_DATA).must_equal 39
@@ -75,5 +84,14 @@ llaweriF
               ||                         
     EOD
     Kagami.convert("Are you crazy? Yes, I'm crazy! Whoops.").must_equal "Whoops. Yes, I'm crazy! Are you crazy?"
+    Kagami.convert(MOO_DATA).must_equal <<-'EOD'.chomp
+                 )__(         
+                 )oo(         
+                  /\------/   
+                   ||    | /  
+                   \/---\/  * 
+                   ~~   ~~    
+..."Have you mooed today?"....
+    EOD
   end
 end
