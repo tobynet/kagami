@@ -7,13 +7,13 @@ $VERBOSE = true
 require 'minitest/autorun'
 begin
   require 'minitest/pride'
-rescue LoadError
+rescue LoadError => e
   # ignore error for old ruby
 end
 require_relative '../lib/kagami'
 
-describe "Kagami" do
-  ONE_LINE_DATA = "The internet >>> Ruby >>>> Java and you"
+describe 'Kagami' do
+  ONE_LINE_DATA = 'The internet >>> Ruby >>>> Java and you'
   MULTI_LINE_DATA = <<-EOD
                       Firewall
                          ||
@@ -32,12 +32,12 @@ describe "Kagami" do
 ...."Have you mooed today?"...
   EOD
 
-  it ".max_width" do
+  it '.max_width' do
     Kagami.max_width(ONE_LINE_DATA).must_equal 39
     Kagami.max_width(MULTI_LINE_DATA).must_equal 41
   end
 
-  it ".ljust" do
+  it '.ljust' do
     Kagami.ljust(ONE_LINE_DATA).must_equal ONE_LINE_DATA
     Kagami.ljust(MULTI_LINE_DATA).must_equal <<-EOD.chomp
                       Firewall           
@@ -49,8 +49,9 @@ describe "Kagami" do
     EOD
   end
 
-  it ".reversed" do
-    Kagami.reversed(ONE_LINE_DATA).must_equal "uoy dna avaJ >>>> ybuR >>> tenretni ehT"
+  it '.reversed' do
+    Kagami.reversed(ONE_LINE_DATA).
+      must_equal 'uoy dna avaJ >>>> ybuR >>> tenretni ehT'
     Kagami.reversed(MULTI_LINE_DATA).must_equal <<-EOD.chomp
 llaweriF                      
 ||                         
@@ -61,8 +62,9 @@ llaweriF
     EOD
   end
 
-  it ".readable_after_reverse" do
-    Kagami.readable(ONE_LINE_DATA).must_equal "tenretni ehT >>> ybuR >>>> uoy dna avaJ"
+  it '.readable_after_reverse' do
+    Kagami.readable(ONE_LINE_DATA).
+      must_equal 'tenretni ehT >>> ybuR >>>> uoy dna avaJ'
     Kagami.readable(MULTI_LINE_DATA).must_equal <<-EOD
                       llaweriF
                          ||
@@ -73,8 +75,9 @@ llaweriF
     EOD
   end
 
-  it ".convert" do
-    Kagami.convert(ONE_LINE_DATA).must_equal "Java and you >>>> Ruby >>> The internet"
+  it '.convert' do
+    Kagami.convert(ONE_LINE_DATA).
+      must_equal 'Java and you >>>> Ruby >>> The internet'
     Kagami.convert(MULTI_LINE_DATA).must_equal <<-EOD.chomp
            Firewall                      
               ||                         
@@ -83,7 +86,8 @@ llaweriF
               ||    +-------+  +--------+
               ||                         
     EOD
-    Kagami.convert("Are you crazy? Yes, I'm crazy! Whoops.").must_equal "Whoops. Yes, I'm crazy! Are you crazy?"
+    Kagami.convert("Are you crazy? Yes, I'm crazy! Whoops.").
+      must_equal "Whoops. Yes, I'm crazy! Are you crazy?"
     Kagami.convert(MOO_DATA).must_equal <<-'EOD'.chomp
                  )__(         
                  )oo(         
