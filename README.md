@@ -1,6 +1,7 @@
 # Kagami
 
-[![Gem Version](https://badge.fury.io/rb/kagami.png)](http://badge.fury.io/rb/kagami) [![Build Status](https://travis-ci.org/toooooooby/kagami.png?branch=master)](https://travis-ci.org/toooooooby/kagami) [![Coverage Status](https://coveralls.io/repos/toooooooby/kagami/badge.png?branch=master)](https://coveralls.io/r/toooooooby/kagami) [![Code Climate](https://codeclimate.com/github/toooooooby/kagami.png)](https://codeclimate.com/github/toooooooby/kagami) [![Dependency Status](https://gemnasium.com/toooooooby/kagami.png)](https://gemnasium.com/toooooooby/kagami)
+[![Gem Version](https://badge.fury.io/rb/kagami.png)](http://badge.fury.io/rb/kagami) [![Build Status](https://travis-ci.org/tobynet/kagami.svg?branch=master)](https://travis-ci.org/tobynet/kagami) [![Dependency Status](https://gemnasium.com/tobynet/kagami.png)](https://gemnasium.com/tobynet/kagami) [![Code Climate](https://codeclimate.com/github/tobynet/kagami.png)](https://codeclimate.com/github/tobynet/kagami) [![Coverage Status](https://coveralls.io/repos/tobynet/kagami/badge.png?branch=master)](https://coveralls.io/r/tobynet/kagami)
+
 
 Kagami is a tool for mirroring text and ascii art.
 
