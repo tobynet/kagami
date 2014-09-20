@@ -6,7 +6,8 @@
 Kagami is a tool for mirroring text and ascii art.
 
 ![Screencast](https://github.com/tobynet/kagami/raw/master/_assets/screencast.gif)
-(Screencast is in v0.1.4, little old version)
+
+(This screencast is in v0.1.4, little old version)
 
 ## Installation
 
